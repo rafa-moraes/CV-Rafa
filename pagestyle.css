@@ -1,20 +1,36 @@
 
 body {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(253, 253, 253);
     
-    
+   
 
 }
 
 header {
-    
-    text-align: center;
     font: italic 30px normal;
     color:black;
-    
+    text-align: center;
     
 }
 
+#box{
+
+
+    background-color: rgba(128, 128, 128, 0.74);
+    height: 100px;
+    position: relative;
+    width: auto;
+    
+       
+
+}
+
+#descricoes {
+
+    text-align: center;
+
+
+}
 #presentation {
     text-align: center;
     font-size: 25px
