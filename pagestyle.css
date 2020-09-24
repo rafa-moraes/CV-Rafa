@@ -1,16 +1,77 @@
 
-body {
-    background-color: rgb(253, 253, 253);
-    
-   
+                    /* Parte de cabecalho*/ 
 
-}
 
 header {
     font: italic 30px normal;
     color:black;
     text-align: center;
     
+}
+
+
+#box-top{
+
+    margin-top: 0%;
+    padding-top: 0%;
+    background-color: rgba(128, 128, 128, 0.74);
+    height: 100px;
+    position: relative;
+    width: auto;
+    
+       
+
+}
+
+                /* Parte de corpo da pagina*/ 
+
+body {
+    background-color: rgb(253, 253, 253);
+                    
+                   }
+#descricoes {
+
+    text-align: center;
+
+
+}
+#presentation {
+    text-align: center;
+    font-size: 25px
+}
+
+#presentationText {
+    text-align: justify;
+
+
+}
+
+
+                                    /* Parte de rodape  */
+.bottom {
+
+    bottom: 10px;
+    position: fixed;
+    background-color: #6c757d56;
+    height: 100px;  
+    width: 100%;
+   
+}
+
+#copyright {
+
+    position: fixed;
+    text-align: center;
+    bottom: 10px; 
+    width: 100%;
+
+}
+.social-media {
+    position: fixed;
+    text-align: center;
+    bottom: 50px; 
+    width: 100%;
+
 }
 .fa {
     padding: 15px;
@@ -30,44 +91,4 @@ header {
 .fa-linkedin {
   background: #007bb5;
   color: white;
-}
-
-
-#box{
-
-
-    background-color: rgba(128, 128, 128, 0.74);
-    height: 100px;
-    position: relative;
-    width: auto;
-    
-       
-
-}
-
-#descricoes {
-
-    text-align: center;
-
-
-}
-#presentation {
-    text-align: center;
-    font-size: 25px
-}
-
-#presentationText {
-    text-align: justify;
-
-
-}
-
-#copyright {
-
-    position: fixed;
-    text-align: center;
-    bottom: 10px; 
-    width: 100%;
-
-
 }
