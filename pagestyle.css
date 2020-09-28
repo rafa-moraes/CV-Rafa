@@ -2,16 +2,20 @@
                     /* Parte de cabecalho*/ 
 
 
+body {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  background-color: white;
+}
+
 header {
 
     background-color: #333;
     height: 50px;
     font: italic 30px normal;
     color:white;
-    
-    
        
-    
 }
 
 
@@ -20,7 +24,9 @@ header {
     margin: 0%;
     text-align: center;
     position: static;
-    width: auto;     
+    width: auto;
+    padding-top: 15px;
+    padding-bottom: 20px;     
 }
 
 .topnav {
@@ -28,18 +34,20 @@ header {
     overflow: hidden;
     
   }
+                /* Navigation Bar*/
 
 .topnav a {
   float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 10px 14px;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 14px bold;
   text-transform: uppercase;
+  
 }
 .topnav a:hover {
-    background-color:#4CAF50;
+    background-color:#4caf4f7e;
     color: white;
   }
   .topnav a.active {
@@ -77,25 +85,28 @@ body {
                                     /* Parte de rodape  */
 .bottom {
 
-    bottom: 10px;
-    position: relative;
+    
+    position: absolute;
     background-color: #6c757d56;
-    height: 100px;  
+    height: 300px;  
     width: 100%;
-   
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
 }
 
 #copyright {
 
-    position: sticky;
+    position: relative;
     text-align: center;
-    bottom: 10px; 
-    width: 100%;
-
+    bottom: 0%;
+    
 }
 .social-media {
-    position: sticky;
-    text-align: center;
+    padding-top: 10px;
+    position: absolute;
+    text-align: top;
     bottom: 50px; 
     width: 100%;
 
