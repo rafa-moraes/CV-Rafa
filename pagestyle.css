@@ -5,28 +5,38 @@
 body {
   margin:0;
   padding:0;
-  box-sizing: border-box;
-  background-color: white;
+  
+  
 }
 
 header {
 
-    background-color: #333;
+    background-color: rgba(51, 51, 51, 0.959);
     height: 50px;
     font: italic 30px normal;
     color:white;
-       
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  
+    text-align: center;
+    position: static;
+    width: auto;
+    padding-top: 5px;
+    z-index: 1 ;
+}
+#fundoDeTela {
+
+  position: absolute;
+  top: 518px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: -100;
+
 }
 
 
 #top-name{
-    font-family: 'Alfa Slab One', cursive;
-    margin: 0%;
-    text-align: center;
-    position: static;
-    width: auto;
-    padding-top: 15px;
-    padding-bottom: 20px;
+
+
     
 
 }
@@ -63,25 +73,47 @@ header {
                 /* Parte de corpo da pagina*/ 
 
 body {
-    background-color: rgb(253, 253, 253);
+  
+
                     
-                   }
-#descricoes {
+}
 
-    text-align: center;
+.xp {
+  height: 700px;
+  width: 50%;
+  margin: 0%;
+  z-index: 2;
+
+}
+
+.xpIreland {
+  position: absolute;
+  left: 51%;
+  background-color: rgba(188, 143, 143, 0);
+  text-align: justify;
+  
+
+}
+
+.xpIreland #presentation {
+  
+ 
+  
+
+}
+
+.xpBrasil {
+  position: absolute;
+  background-color: rgba(250, 255, 255, 0);
+  left: 50px;
+  
+  
+  
+  
 
 
 }
-#presentation {
-    text-align: center;
-    font-size: 25px
-}
 
-#presentationText {
-    text-align: justify;
-
-
-}
 
 
                                     /* Parte de rodape  */
@@ -89,12 +121,14 @@ body {
 
     
     position: absolute;
-    background-color: #6c757d56;
+    background-color: #6c757d77;
     height: 300px;  
     width: 100%;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    top: 1500px;
+    color: #fff;
     
 }
 
