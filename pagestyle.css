@@ -13,13 +13,12 @@ header {
 
     background-color: rgba(51, 51, 51, 0.959);
     height: 50px;
+    width: 100%;
     font: italic 30px normal;
     color:white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  
     text-align: center;
-    position: static;
-    width: auto;
-    padding-top: 5px;
+    padding-top: 1px;
     z-index: 1 ;
 }
 #fundoDeTela {
@@ -35,14 +34,14 @@ header {
 
 
 #top-name{
-
+  
 
     
 
 }
 
 .topnav {
-    background-color: #333;
+    background-color: rgba(51, 51, 51, 0.959);
     overflow: hidden;
     
   }
@@ -121,7 +120,7 @@ body {
 
     
     position: absolute;
-    background-color: #6c757d77;
+    background-color: #6c757db7;
     height: 300px;  
     width: 100%;
     box-sizing: border-box;
