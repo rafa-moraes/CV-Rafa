@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: black;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 5fr 5fr;
+    grid-template-rows: 10vh 40vh 40vh 10vh;
+    grid-template-areas: "cabecalho cabecalho cabecalho"
+                         "lateral experiencias exp2 "   
+                         "lateral graduation grad2 "
+                         "rodape rodape rodape"
+    ;
+}
+
+.cabecalho{
+    background: blue;
+    grid-area: cabecalho;
+
+}
+.experiencias {
+    background: cornflowerblue;
+    grid-area: experiencias;
+
+}
+.exp2 {
+    background: darkgoldenrod;
+    grid-area: exp2;
+}
+
+.graduation {
+    background: crimson;
+    grid-area: graduation;
+
+}
+.graduation2 {
+    background: darkgreen;
+    grid-area: grad2;
+}
+
+.lateral{
+    background: chartreuse;
+    grid-area: lateral;
+
+}
+.rodape {
+    background: coral;
+    grid-area: rodape;
+
+}
+

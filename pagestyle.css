@@ -1,7 +1,5 @@
 
                     /* Parte de cabecalho*/ 
-
-
 body {
   margin:0;
   padding:0;
@@ -13,8 +11,8 @@ header {
 
     background-color: rgba(51, 51, 51, 0.959);
     height: 50px;
-    width: 100%;
-    font: italic 30px normal;
+    width: 100vmax;
+    font: italic 15px normal;
     color:white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  
     text-align: center;
@@ -25,23 +23,19 @@ header {
 
   position: absolute;
   top: 518px;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  height: 500px;
+  width: 1800px;
   z-index: -100;
 
 }
-
-
-#top-name{
-  
-
-    
-
+#fundoDeTela img {
+  height: 100%;
+  width: 100%;
 }
 
 .topnav {
     background-color: rgba(51, 51, 51, 0.959);
+    width: 100vmax;
     overflow: hidden;
     
   }
@@ -68,14 +62,8 @@ header {
 
 
 
-
                 /* Parte de corpo da pagina*/ 
 
-body {
-  
-
-                    
-}
 
 .xp {
   height: 700px;
@@ -94,12 +82,6 @@ body {
 
 }
 
-.xpIreland #presentation {
-  
- 
-  
-
-}
 
 .xpBrasil {
   position: absolute;
@@ -107,10 +89,6 @@ body {
   left: 50px;
   
   
-  
-  
-
-
 }
 
 
