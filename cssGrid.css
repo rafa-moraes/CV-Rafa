@@ -7,18 +7,22 @@ body {
 
 .container{
     display: grid;
-    grid-template-columns: 0.5fr 5fr 5fr;
-    grid-template-rows: 100px 800px 800px 300px;
+    grid-template-columns: 10vw;
+    grid-template-rows: 1000px 1000px 1000px 1000px 300px;
     grid-template-areas: "cabecalho cabecalho cabecalho"
-                         "lateral experiencias exp2"   
-                         "lateral graduation grad2"
+                         "graduation graduation graduation"
+                         "experiencias experiencias experiencias"   
+                         "ssk ssk ssk"
                          "rodape rodape rodape"
     ;
+    overflow: hidden;
 }
 
 .cabecalho {
     background:  rgba(51, 51, 51, 0.959);
     grid-area: cabecalho;
+    
+    
 }
 
 #name {
@@ -32,6 +36,9 @@ body {
     list-style: none;
     font-weight: 500;
     color: #fff;
+    position: relative;
+    top: 800px;
+    left: 1300px;
     
 }
 
@@ -58,31 +65,76 @@ body {
     
 }
 
+                        /* Parte de graduacao e foto*/
+.graduation {
+    background-color: transparent;
+    grid-area: graduation;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: static;
+         
+
+}
+#graduacaoback {
+    z-index: -10;
+    
+}
+
+.graduationRafa {
+    
+    position: static;
+    z-index: 10;
+}
+.graduationRafa img{
+    position: relative;
+    left: 20%;
+    top: 20%;
+    z-index: 10;
+    
+}
+
+.graduationTxt {
+    color: #fff;
+        
+}
+
+.graduationTxt > h1 {
+    text-align: center;
+}
+.graduationTxt > p {
+    text-align: justify;
+}
+
+
+
+
+
+
+                    /* Parte de experiencias profissionais*/
+
 .experiencias {
     background: cornflowerblue;
     grid-area: experiencias;
-
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
 }
-.exp2 {
-    background: darkgoldenrod;
-    grid-area: exp2;
+.expIrl {
+    background: #fff;
 }
-
-.graduation {
-    background: crimson;
-    grid-area: graduation;
-
-}
-.graduation2 {
-    background: darkgreen;
-    grid-area: grad2;
+.expBrl {
+    background: #ddd;
 }
 
-.lateral{
-    background: chartreuse;
-    grid-area: lateral;
-
+                        /* Parte de skills*/
+.ssk{
+    background: yellowgreen;
+    grid-area: ssk;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
+
+                        /* Parte de rodape e contatos*/
 .rodape {
     background: rgba(117, 110, 108, 0.616);
     grid-area: rodape;
@@ -120,6 +172,8 @@ body {
     padding-bottom: 5px;
     
 }
+
+                    /* Seta para voltar ao topo*/
 #arrowdown {
     padding-top: 10px;
     padding-right: 10px;
