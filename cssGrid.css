@@ -2,13 +2,14 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: black;
+    background: rgba(51, 51, 51, 0.959);
 }
 
 .container{
     display: grid;
     grid-template-columns: 10vw;
     grid-template-rows: 1000px 1000px 1000px 1000px 300px;
+    row-gap:5px;
     grid-template-areas: "cabecalho cabecalho cabecalho"
                          "graduation graduation graduation"
                          "experiencias experiencias experiencias"   
@@ -82,7 +83,7 @@ body {
     background-color: transparent;
     grid-area: graduation;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     position: static;
     background-image: url(Images/graduation-day.jpg);
     background-repeat: no-repeat;
@@ -112,11 +113,16 @@ body {
 
 .graduationTxt {
     color: #fff;
+    position: relative;
+    right: 100px;
+    top: 80px;
         
 }
 
 .graduationTxt > h1 {
     text-align: center;
+    position: relative;
+    bottom: 30px;
 }
 .graduationTxt > p {
     text-align: justify;
@@ -133,30 +139,57 @@ body {
     background: cornflowerblue;
     grid-area: experiencias;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    background-image: url(Images/experience-img.jpg);
+    grid-template-columns: 1fr 1fr 1fr;
+    background-image: url(Images/experience_book.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
+    position: static;
     
     
 }
 .expIrl {
     color: #fff;
+    position: relative;
+    left: 100px;
+    top: 100px;
 }
+.expIrl>h1{
+    position: relative;
+    bottom: 50px;
+
+}
+
+
 .expBrl {
     color: #fff;
+    position: relative;
+    right: 100px;
+    top: 100px;
 }
+.expBrl>h1{
+    position: relative;
+    bottom: 50px;
+}
+
+
 
                         /* Parte de skills*/
 .ssk{
-    background: yellowgreen;
+    background-image: url(Images/chartsBg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     grid-area: ssk;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
+
+
+
+
                         /* Parte de rodape e contatos*/
 .rodape {
-    background: rgba(117, 110, 108, 0.616);
+    background: rgba(117, 110, 108, 0.363);
     grid-area: rodape;
     color: #fff;
     text-align: center;
@@ -195,7 +228,13 @@ body {
 
                     /* Seta para voltar ao topo*/
 #arrowdown {
+    position: sticky;
     padding-top: 10px;
     padding-right: 10px;
+}
+.backTop {
+    
+
+    
 }
 
