@@ -21,9 +21,21 @@ body {
 .cabecalho {
     background:  rgba(51, 51, 51, 0.959);
     grid-area: cabecalho;
-    
+        
     
 }
+.bttEnter {
+    height: 30px;
+    width: 80px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    border-radius: 10%;
+    color: #ddd;
+    
+}
+
+
 
 #name {
     font-size: 30px;
@@ -72,9 +84,14 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     position: static;
-         
-
+    background-image: url(Images/graduation-day.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+              
 }
+
+
 #graduacaoback {
     z-index: -10;
     
@@ -117,13 +134,16 @@ body {
     grid-area: experiencias;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    background-image: url(Images/experience-img.jpg);
+    background-size: cover;
+    
     
 }
 .expIrl {
-    background: #fff;
+    color: #fff;
 }
 .expBrl {
-    background: #ddd;
+    color: #fff;
 }
 
                         /* Parte de skills*/
