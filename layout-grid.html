@@ -9,7 +9,7 @@
 <body>
     <div class="container">
             <header class = "cabecalho">
-            <button class="bttEnter" type="submit"> <a href="#gradPage"> Access</a></button>
+            <input id="bttnEnter" type="button" value="Enter" onclick= "clique">
             <h1 id="name" > Rafael Moraes Barros </h1>
             <a id="topPage"></a>
             <div class="navbar">
@@ -128,17 +128,36 @@
 
 
         <footer class ="rodape">
+            <div  id="phone">
+                <h2><img src="Images/phone50.png" alt=""></h2>
+                <h2>+353 83 112 5484</h2>
+            </div>    
 
-            <h1>Contact Me</h1>
-            <p>Feel free to contact me in any of the social medias bellow or via phone/e-mail</p>
-            <div id="phone">+353 83 112 5484</div>
-            <a id="contactPage"></a>
-            <div id="email">rafael_m_barros@hotmail.com</div> <!-- Fazer uma funcao para abrir uma caixa de formulario para enviar o email automatico-->
-            <div id="webpage">www.webpage.com.br</div>
+            <div id="email">
+                <h1>Contact Me</h1>
+                <p>Feel free to contact me in any of the social medias bellow or via phone/e-mail</p>
+                <h2><img src="Images/email50.png" alt=""></h2>
+                <h2>rafael_m_barros@hotmail.com</h2>
+                <a id="contactPage"></a>
+            </div>
+
+            <div id="webpage">
+                <h2><img src="Images/chrome50.png" alt=""></h2>
+                <h2>www.webpage.com.br</h2>
+            </div>
+
+            
+            
+            
+             <!-- Fazer uma funcao para abrir uma caixa de formulario para enviar o email automatico-->
+            
 
             
             
         </footer>
     </div>
+
+    <script src="javaScript.js"></script>
+
 </body>
 </html>

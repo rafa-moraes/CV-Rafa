@@ -2,21 +2,23 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: rgba(51, 51, 51, 0.959);
+    background: rgba(255, 255, 255, 0.959);
+    
+    
 }
 
 .container{
     display: grid;
-    grid-template-columns: 10vw;
+    grid-template-columns: 1fr;
     grid-template-rows: 1000px 1000px 1000px 1000px 300px;
-    row-gap:5px;
-    grid-template-areas: "cabecalho cabecalho cabecalho"
-                         "graduation graduation graduation"
-                         "experiencias experiencias experiencias"   
-                         "ssk ssk ssk"
-                         "rodape rodape rodape"
+    row-gap:2px;
+    grid-template-areas: "cabecalho"
+                         "graduation"
+                         "experiencias"   
+                         "ssk"
+                         "rodape"
     ;
-    overflow: hidden;
+    
 }
 
 .cabecalho {
@@ -25,14 +27,15 @@ body {
         
     
 }
-.bttEnter {
+#bttnEnter {
     height: 30px;
     width: 80px;
     position: absolute;
     top: 70%;
     left: 50%;
     border-radius: 10%;
-    color: #ddd;
+    background-color: transparent;
+    color: #fff;
     
 }
 
@@ -49,10 +52,11 @@ body {
     list-style: none;
     font-weight: 500;
     color: #fff;
-    position: relative;
-    top: 800px;
-    left: 1300px;
+    position: absolute;
+    top: 900px;
+    left: 70%;
     
+        
 }
 
 .navbar li {
@@ -188,42 +192,63 @@ body {
 
 
                         /* Parte de rodape e contatos*/
+                        
 .rodape {
-    background: rgba(117, 110, 108, 0.363);
+    background: rgba(192, 52, 13, 0.945);
     grid-area: rodape;
-    color: #fff;
-    text-align: center;
+    color: black;
     position: static;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .rodape #phone {
-    position: absolute;
-    padding-top: 100px;
-    width: 25%;
+    
+    width: 100%;
+    
+}
+
+#phone>h2{
+    text-align: center;
+    position:relative;
+    top: 130px;
 
 }
+
 .rodape #email {
-    position: absolute;
-    padding-top: 100px;
+       
     width: 100%;
 
 }
-.rodape #webpage {
-    position: absolute;
-    padding-top: 100px;
-    width: 175%;
 
-}
-.rodape #cv {
-    font-size: 20px;
-    height: 50px;
-    width: 130px;
-    background: rgba(158, 145, 145, 0.185);
-    color: #fff;
-    border-radius: 12%;
-    box-shadow: 2px 2px rgba(0, 0, 0, 0.185);
-    padding-bottom: 5px;
+#email>h1 {
+    text-align: center;
+    position: relative;
     
+}
+
+#email>p {
+    text-align: center;
+    position: relative;
+    font: bold 18px normal;
+    
+}
+
+#email>h2 {
+    text-align: center;
+    position: relative;
+    top: 45px;
+}
+
+.rodape #webpage {
+    
+    width: 100%;
+}
+
+#webpage>h2 {
+    text-align: center;
+    position:relative;
+    top: 130px;
 }
 
                     /* Seta para voltar ao topo*/
@@ -231,10 +256,5 @@ body {
     position: sticky;
     padding-top: 10px;
     padding-right: 10px;
-}
-.backTop {
-    
-
-    
 }
 
