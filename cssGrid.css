@@ -7,6 +7,75 @@ body {
     
 }
 
+.social_media {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%)
+}
+.social_media ul{
+    list-style: none;
+    padding: 5px;
+    margin: 0px;
+    
+}
+.social_media li>a {
+    text-decoration: none;
+}
+.social_media ul li {
+    font-size: 30px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    width: 30px;
+    transition: 0.3s;
+    
+    
+    
+}
+            /* LinkedIn icon*/
+.social_media li:nth-child(1) {
+    background-color: #007bb5;
+    
+}
+.social_media li:nth-child(1):hover {
+    background-color:#fff;
+    width: 140px;
+    
+}
+            /* Facebook icon*/
+.social_media li:nth-child(2){
+    background-color: #3b5998;
+    height: 30px;
+    color: rgb(10, 6, 6);
+    
+
+}
+.social_media span {
+    margin-left: 5px;
+}
+.social_media li:nth-child(2):hover {
+    background-color: #fff;
+    width: 140px;
+    box-shadow: 3px 3px gray;
+    transition: 0.3s;
+}
+            /* GitHub icon*/
+.social_media li:nth-child(3){
+    background-color: black;
+    
+}
+.social_media li:nth-child(3):hover {
+    background-color: #fff;
+    width: 140px;
+}
+
+
+
+
+
+
+
+
 .container{
     display: grid;
     grid-template-columns: 1fr;
@@ -22,10 +91,9 @@ body {
 }
 
 .cabecalho {
-    background:  rgba(51, 51, 51, 0.959);
+    background:  linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
     grid-area: cabecalho;
         
-    
 }
 #bttnEnter {
     height: 30px;
@@ -89,7 +157,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     position: static;
-    background-image: url(Images/graduation-day.jpg);
+    /*background-image: url(Images/graduation-day.jpg);*/
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -144,7 +212,7 @@ body {
     grid-area: experiencias;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    background-image: url(Images/experience_book.jpg);
+    /*background-image: url(Images/experience_book.jpg);*/
     background-size: cover;
     background-repeat: no-repeat;
     position: static;
@@ -179,7 +247,7 @@ body {
 
                         /* Parte de skills*/
 .ssk{
-    background-image: url(Images/chartsBg.jpg);
+    /*background-image: url(Images/chartsBg.jpg);*/
     background-repeat: no-repeat;
     background-size: cover;
     grid-area: ssk;
@@ -194,7 +262,7 @@ body {
                         /* Parte de rodape e contatos*/
                         
 .rodape {
-    background: rgba(192, 52, 13, 0.945);
+    background: linear-gradient(315deg, gray 30%, #fff 55% );
     grid-area: rodape;
     color: black;
     position: static;
