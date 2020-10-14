@@ -91,7 +91,7 @@ body {
 }
 
 .cabecalho {
-    background:  linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+    background:  linear-gradient(315deg, #db7c0e 0%, #eff0f1 80%);
     grid-area: cabecalho;
         
 }
@@ -115,15 +115,16 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0.3em;
     color: #fff;
+    text-align: right;
 }
 .navbar {
     list-style: none;
     font-weight: 500;
     color: #fff;
-    position: absolute;
+    position: sticky;
     top: 900px;
     left: 70%;
-    
+  
         
 }
 
@@ -134,7 +135,7 @@ body {
 }
 .navbar a{
     padding: 10px;
-    padding-left: 0;
+    padding-left: 10px;
     text-decoration: none;
     list-style: none;
     color: #fff;
@@ -142,9 +143,9 @@ body {
 
 .navbar a:hover {
     
-    background: darkgreen;
+    background: rgba(100, 57, 0, 0.534);
     padding: 10px;
-    padding-left: 0;
+    padding-left: 10px;
     color: #fff;
     margin: 0;
     
@@ -252,7 +253,7 @@ body {
     background-size: cover;
     grid-area: ssk;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 
