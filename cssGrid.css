@@ -3,20 +3,22 @@ body {
     padding: 0;
     box-sizing: border-box;
     background: rgba(255, 255, 255, 0.959);
-    
+    position: static;
     
 }
-
+        /* Parte de midias sociais */
 .social_media {
     position: fixed;
     top: 50%;
     left: 0;
-    transform: translateY(-50%)
+    transform: translateY(-50%);
+    
 }
 .social_media ul{
     list-style: none;
     padding: 5px;
     margin: 0px;
+    z-index: 9999;
     
 }
 .social_media li>a {
@@ -28,36 +30,29 @@ body {
     overflow: hidden;
     width: 30px;
     transition: 0.3s;
-    
-    
-    
+    text-align: center;
+    border-radius: 5px;
+       
 }
             /* LinkedIn icon*/
 .social_media li:nth-child(1) {
     background-color: #007bb5;
-    
+        
 }
 .social_media li:nth-child(1):hover {
     background-color:#fff;
-    width: 140px;
     
 }
             /* Facebook icon*/
 .social_media li:nth-child(2){
     background-color: #3b5998;
-    height: 30px;
-    color: rgb(10, 6, 6);
     
+    
+}
 
-}
-.social_media span {
-    margin-left: 5px;
-}
 .social_media li:nth-child(2):hover {
     background-color: #fff;
-    width: 140px;
-    box-shadow: 3px 3px gray;
-    transition: 0.3s;
+    
 }
             /* GitHub icon*/
 .social_media li:nth-child(3){
@@ -66,7 +61,6 @@ body {
 }
 .social_media li:nth-child(3):hover {
     background-color: #fff;
-    width: 140px;
 }
 
 
@@ -80,7 +74,6 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1000px 1000px 1000px 1000px 300px;
-    row-gap:2px;
     grid-template-areas: "cabecalho"
                          "graduation"
                          "experiencias"   
@@ -89,9 +82,9 @@ body {
     ;
     
 }
-
+                 /* Parte de cabecalho */
 .cabecalho {
-    background:  linear-gradient(315deg, #db7c0e 0%, #eff0f1 80%);
+    background:  linear-gradient(to bottom, rgba(219, 124, 14, 0.7), rgba(219, 124, 14, 0.6));
     grid-area: cabecalho;
         
 }
@@ -108,7 +101,7 @@ body {
 }
 
 
-
+        /* My name */
 #name {
     font-size: 30px;
     padding-left: 40px;
@@ -117,20 +110,39 @@ body {
     color: #fff;
     text-align: right;
 }
+        /* Navigation bar  */
+
+.navigation {
+    position: relative;
+    top: 1000px;
+    z-index: 999;
+    background: linear-gradient(to right, rgb(138, 133, 133),rgba(138, 133, 133,0.9));
+
+}
+.navigation {
+    position: sticky;
+    top: 10px;
+    z-index: 999;
+
+}
+
 .navbar {
     list-style: none;
     font-weight: 500;
-    color: #fff;
-    position: sticky;
-    top: 900px;
-    left: 70%;
-  
+    
         
+}
+.navbar ul {
+    position: absolute;
+    
+
 }
 
 .navbar li {
+    position: sticky;
     display: inline;
     padding-right: 5px;
+    top: 0px;
     
 }
 .navbar a{
@@ -138,7 +150,8 @@ body {
     padding-left: 10px;
     text-decoration: none;
     list-style: none;
-    color: #fff;
+    color: rgb(12, 9, 9);
+    font-weight: 800;
 }
 
 .navbar a:hover {
@@ -153,39 +166,36 @@ body {
 
                         /* Parte de graduacao e foto*/
 .graduation {
-    background-color: transparent;
+    background:  linear-gradient(to bottom, rgba(219, 124, 14, 0.6), rgba(219, 124, 14, 0.4));
     grid-area: graduation;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     position: static;
     /*background-image: url(Images/graduation-day.jpg);*/
-    background-repeat: no-repeat;
-    background-size: cover;
+    /* background-repeat: no-repeat;
+    background-size: cover; */
     
               
 }
 
 
-#graduacaoback {
-    z-index: -10;
-    
-}
+
 
 .graduationRafa {
     
     position: static;
-    z-index: 10;
+    
 }
 .graduationRafa img{
     position: relative;
     left: 20%;
     top: 20%;
-    z-index: 10;
+    
     
 }
 
 .graduationTxt {
-    color: #fff;
+    color: rgb(15, 1, 1);
     position: relative;
     right: 100px;
     top: 80px;
@@ -209,7 +219,7 @@ body {
                     /* Parte de experiencias profissionais*/
 
 .experiencias {
-    background: cornflowerblue;
+    background: linear-gradient(to bottom, rgba(219, 124, 14, 0.4), rgba(219, 124, 14, 0.2));
     grid-area: experiencias;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -221,7 +231,7 @@ body {
     
 }
 .expIrl {
-    color: #fff;
+    color: rgb(0, 0, 0);
     position: relative;
     left: 100px;
     top: 100px;
@@ -234,7 +244,7 @@ body {
 
 
 .expBrl {
-    color: #fff;
+    color: rgb(0, 0, 0);
     position: relative;
     right: 100px;
     top: 100px;
@@ -249,12 +259,27 @@ body {
                         /* Parte de skills*/
 .ssk{
     /*background-image: url(Images/chartsBg.jpg);*/
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: linear-gradient(to bottom, rgba(219, 124, 14, 0.2), rgba(219, 124, 14, 0.1));
     grid-area: ssk;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
+.knowledge {
+    color: rgb(0, 0, 0);
+    position: relative;
+    left: 100px;
+    top: 100px;
+
+}
+.skills {
+    color: rgb(0, 0, 0);
+    position: relative;
+    left: 100px;
+    top: 100px;
+}
+
+
+
 
 
 
@@ -263,7 +288,7 @@ body {
                         /* Parte de rodape e contatos*/
                         
 .rodape {
-    background: linear-gradient(315deg, gray 30%, #fff 55% );
+    background: linear-gradient(to bottom, rgba(219, 124, 14, 0.1), rgba(219, 124, 14, 0.0));
     grid-area: rodape;
     color: black;
     position: static;
@@ -306,7 +331,7 @@ body {
 #email>h2 {
     text-align: center;
     position: relative;
-    top: 45px;
+    top: 80px;
 }
 
 .rodape #webpage {

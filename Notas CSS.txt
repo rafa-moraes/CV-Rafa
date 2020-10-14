@@ -1,0 +1,116 @@
+Em css todo final de marcacao tem ";"
+
+Comentario eh /* comentario */
+
+Selectors sao o que vao mirar os elementos que sao o h1 , h2 etc, os seletores sao no css quando vc poe h1 {} e o que vai dentro das curly braces sao as propriedades
+
+Seletor:
+h1 (elemento) {
+color (propriedade): blue (valor);
+
+Para criar um arquivo externo de css eh soh criar um arquivo com a extensao .css
+Ao usar o comando link:css ele ja ira criar um codigo e na parte de href se vc segurar o ctrl e clicar e vc nao tiver 
+o arquivo criado ele da uma msg de erro e a sugestao para vc criar o arquivo.
+text-align - serve para ajustar o texto para normal, bold, bolder ou justify
+text-indent - serve para que um texto tenha um espaco antes de comecar o texto, ou seja, uma margem de comeco, 50px eh um bom valor.
+rgba(23,23,23,0.4) eh o rgb com um percentual de transparencia, o ultimo valor vai de 0 a 1 e representa 0 o maior nivel de transparencia e 1 o menor nivel.
+
+Eh possivel utilizar o width e height em 100% para que independete do tamanho da tela que for ver a foto vai se adaptando.
+box-shadow (deslocamento horizontal, deslocamento vertical, de espalhamento, cor)
+padding eh um preenchimento invisivel dentro do bloco, ao usar so o padding ele preenche ao redor todo do texto (em cima, laterais e em baixo)
+ex: padding: 14px 26px 5px 40px; (top, right, bottom, left)
+margin eh o preenchimento do lado de fora da "caixa" (pra cima, pra baixo, e laterais)
+position relative ele considera a posicao de onde ele foi criado e reserva aquele espaco, e ai vc pode movimentar ele a partir de onde ele foi criado para todos os lados
+position static ele eh criado ali e dali nao sai.
+
+		Pseudoselectors:
+
+	h1:hover {}
+	h1:first-child{}
+	h1:last-child{}
+	h1:nth-child(n){}
+	h1:only-child{}
+Voce deve selecionar o child e colocar o pseudoselector para que ele funcione, caso vc selecione o parent ele nao vai funcionar
+
+		Pseudoselectors para links:
+	h1:link
+	h1:visited
+Basicamente o primeiro eh caso vc ainda nao tenha clicado no link para acessar e o visited eh caso a pessoa ja tenha clicado no link e visitado a pagina
+
+		Advanced selectors:
+
+Para fazer uma configuracao de que todos os <a> seguidos de um <h2> por exemplo utilizar assim:
+	h2 + a {}
+Neste caso ele nao precisam estar dentro de um mesmo parent, soh serem seguidos
+
+Para fazer uma configuracao como o de cima mas que estao dentro de um mesmo parent utilizar o seguinte:
+	h2 ~ a {}
+Dessa forma ele ira configurar somente os itens de forem seguidos e dentro do mesmo parent
+
+Para configurar todos os childs dentro de um parent utilizar o seguinte:
+	ul > li {} 
+Neste caso ele ira fazer uma configuracao para todos os childs li que estao dentro do parent ul
+
+No caso acima ele seleciona todos os childs diretos do ul, para selecionar todos os li dentro do parent utilizar sem o sinal >:
+	ul li {}
+Desta forma todos os li que estiverem dentro do ul (independente se ele for um child direto ou nao do ul) serao alterados.
+
+		Attribute selectors:
+Um atributo pode ser uma class ou um src dentro de um img ou qualquer outro atributo.
+Com isso vc pode selecionar varios itens para configurar sem precisar criar um nome ou selecionar pelo selector.
+O exemplo utilizado ele configura todas as imagens que estao na pasta de imagens e o comando fica o seguinte:
+	img [src ^= "../img/] {}
+Desta forma vc esta dizendo que o ^= significa que todo src que comecar com esse caminho tera a configuracao que vc colocar, caso nao tenha o ^ ele ira selecionar 
+especificamente esse caminho que na verdade nao ira fazer nada. Entao para esse caso eh necessario o ^=.
+Existem mais tipos que sao:
+	^=  - significa comeca com o caminho informado
+	$=  - significa termina com o caminho informado
+	*=  - significa contem dentro do caminho ou "value" 	
+		
+		White space selector
+Dentro de uma classe eh possivel dar varios nomes por exemplo <h2> class = "casas casa_do_cachorro" </h2>
+Nessa situacao caso vc queira selecionar somente o casa do cachorro vc pode utilizar o seguinte seletor:
+	h2 [class~=casa_do_cachorro] {}
+O ~= serve para selecionar todo o value que estiver depois de um espaco em branco
+
+		Dash selector
+Caso vc tenha uma class que tenha assim por exemplo casa-cachorro e vc queira selecionar todos os itens que comecam com casa- utilizar assim:
+	h2[class|=casa-cahorro]{}
+
+
+		Background:
+Podemos utilizar o comando background no css para colocar uma cor ou imagem no fundo da pagina
+para colocar uma imagem utilizar:
+	background: url("endereco online ou da sua pasta");
+Para fazer com que a imagem nao se repita utilizar o comando:
+background-repeat: no-repeat;
+Para ajustar o tamanho da imagem de fundo:
+	background-size: 50px (height) 100px (width);
+	background-size: cover; Ira preencher o espaco inteiro, talvez possa comprometer a qualidade da imagem
+	background-size: contain; Ele ira preencher o maximo que ter sem prejudicar as proporcoes, mas isso pode fazer com que a imagem nao pegue todo o espaco do container
+
+		Cores Gradient
+	Linear
+È uma transicao de cores (2 ou mais) que podem ser da esquerda pra direita, de cima pra baixo, dir pra esqu, baix pra cima ou ate em circulo
+ex:
+	background: linear-gradient(to right, red, green, blue); ou seja, voce esta falando que a cor vai comecar pelo vermelho na esquerda e vai pra direita transicionando ate o azul.
+Tambem pode usar uma cor soh e fazer ela ir desaparecendo, ex:
+	background: linear-gradient(to right, rgb(94, 255, 126) , rgba(94,255,126,0)); dessa forma vc utiliza uma cor 2 vezes mas na segunda vc adicionou uma transparencia que eh de 0 ou seja 100% transparente.
+
+Para fazer ir transicionando diagonalmente utilizar assim:
+	background: linear-gradient(to bottom right, rgb(94, 255, 126) , rgba(94,255,126,0));
+Para fazer transicionar para um pedaco da tela que nao seja exatamente nos cantos ou cima, baixo e etx utilizar assim:
+	background: linear-gradient(-90deg, rgb(94, 255, 126) , rgba(94,255,126,0)); 
+o -90 eh referente a graus, assim como em uma regua de angulos, mas no css o angulo 0 eh como se fosse o 90 graus, ou seja, o meio em peh eh zero e a partir dai 
+vc vai definindo quanto de angulo vc quer que ele transicione. O DEG eh degrees, ou seja, graus, nesse caso dissemos que queremos -90 graus a partir do 0 q eh no meio.
+
+	Radial
+O radial-gradient ele tem a forma de circulo ou oval, funciona muito semelhante ao linear
+	background: radial-gradient(circle, red 20%, blue 40%, green 55%)
+
+
+
+
+
+
+
