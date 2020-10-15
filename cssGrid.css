@@ -169,7 +169,7 @@ body {
     background:  linear-gradient(to bottom, rgba(219, 124, 14, 0.6), rgba(219, 124, 14, 0.4));
     grid-area: graduation;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 5fr 0.2fr 5fr;
     position: static;
     /*background-image: url(Images/graduation-day.jpg);*/
     /* background-repeat: no-repeat;
@@ -181,31 +181,35 @@ body {
 
 
 
-.graduationRafa {
+.imgRafa {
     
     position: static;
     
+    margin-top: 50px;
+    padding-left: 20%;
+    padding-top: 85px;
+    
 }
-.graduationRafa img{
+.imgRafa img{
     position: relative;
-    left: 20%;
-    top: 20%;
-    
-    
+    height: auto;
+    max-width: 90%;
+        
 }
 
 .graduationTxt {
     color: rgb(15, 1, 1);
     position: relative;
-    right: 100px;
-    top: 80px;
+    margin-top: 50px;
+    
         
 }
 
-.graduationTxt > h1 {
+.graduationTxt > h2 {
     text-align: center;
     position: relative;
-    bottom: 30px;
+    font-size: 30px;
+    
 }
 .graduationTxt > p {
     text-align: justify;
@@ -222,7 +226,7 @@ body {
     background: linear-gradient(to bottom, rgba(219, 124, 14, 0.4), rgba(219, 124, 14, 0.2));
     grid-area: experiencias;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 5fr 0.2fr 5fr;
     /*background-image: url(Images/experience_book.jpg);*/
     background-size: cover;
     background-repeat: no-repeat;
@@ -233,10 +237,10 @@ body {
 .expIrl {
     color: rgb(0, 0, 0);
     position: relative;
-    left: 100px;
-    top: 100px;
+    left: 30px;
+    margin-top: 100px;
 }
-.expIrl>h1{
+.expIrl>h2{
     position: relative;
     bottom: 50px;
 
@@ -246,10 +250,9 @@ body {
 .expBrl {
     color: rgb(0, 0, 0);
     position: relative;
-    right: 100px;
-    top: 100px;
+    margin-top: 100px;
 }
-.expBrl>h1{
+.expBrl>h2{
     position: relative;
     bottom: 50px;
 }
@@ -262,22 +265,32 @@ body {
     background: linear-gradient(to bottom, rgba(219, 124, 14, 0.2), rgba(219, 124, 14, 0.1));
     grid-area: ssk;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 5fr 0.2fr 5fr;
 }
 .knowledge {
     color: rgb(0, 0, 0);
     position: relative;
-    left: 100px;
-    top: 100px;
+    left: 30px;
+    margin-top: 100px;
 
 }
+.knowledge>h2 {
+    position: relative;
+    bottom: 50px;
+
+
+}
+
 .skills {
     color: rgb(0, 0, 0);
     position: relative;
-    left: 100px;
-    top: 100px;
+    left: 0px;
+    margin-top: 100px;
 }
-
+.skills>h2 {
+    position: relative;
+    bottom: 50px;
+}
 
 
 

@@ -90,7 +90,7 @@ Para ajustar o tamanho da imagem de fundo:
 	background-size: contain; Ele ira preencher o maximo que ter sem prejudicar as proporcoes, mas isso pode fazer com que a imagem nao pegue todo o espaco do container
 
 		Cores Gradient
-	Linear
+	Linear Gradient
 È uma transicao de cores (2 ou mais) que podem ser da esquerda pra direita, de cima pra baixo, dir pra esqu, baix pra cima ou ate em circulo
 ex:
 	background: linear-gradient(to right, red, green, blue); ou seja, voce esta falando que a cor vai comecar pelo vermelho na esquerda e vai pra direita transicionando ate o azul.
@@ -104,9 +104,93 @@ Para fazer transicionar para um pedaco da tela que nao seja exatamente nos canto
 o -90 eh referente a graus, assim como em uma regua de angulos, mas no css o angulo 0 eh como se fosse o 90 graus, ou seja, o meio em peh eh zero e a partir dai 
 vc vai definindo quanto de angulo vc quer que ele transicione. O DEG eh degrees, ou seja, graus, nesse caso dissemos que queremos -90 graus a partir do 0 q eh no meio.
 
-	Radial
+	Radial Gradient
 O radial-gradient ele tem a forma de circulo ou oval, funciona muito semelhante ao linear
 	background: radial-gradient(circle, red 20%, blue 40%, green 55%)
+
+
+		Medidas utilizadas
+px - sao pixels, sao versateis mas ao mesmo tempo sao fixas pq vc define um valor absoluto e ele ira manter esse tamanho.
+% - percentual sao versateis e responsivos pois vao se ajustando ao tamanho da tela do usuario
+em - ele pega o tamanho original e vc pode definir um percentual de quanto vc quer aumentar ou diminuir em relacao ao padrao, ex:
+Um texto vem nesse tamanho padrao, caso eu queira aumentar 50% o tamanho dele posso usar 1.5em, e caso eu queira reduzir 50% do tamanho dele eu uso 0.5em
+vh - view height pelo que entendi eh relacionado a um percentual do campo de visao que vc tem da tela em altura
+vw - view width eh relacionado a um percentual do campo de visao que vc tem da tela em largura
+
+
+
+		Text Manipulation
+A manipulacao de texto eh independente da fonte, ou seja, se a fonte for arial, times new roman ou estiver em negrito, vc pode alinhar, colocar linhas, deixar em caixa alta com a manipulacao de texto, 
+mas vc nao consegue fazer esses tipos de coisa na manipulacao de fonte.
+
+text-decoration pode ter 4 tipos:
+	underline - linha em baixo do texto, "sublinhado"
+	none - Nao tem nenhum tipo de linha no texto
+	line-through - ele corta o texto ao meio, meio q pra indicar que algo nao existe mais, ou que nao pode ser usado, mas ainda eh possivel ler o texto
+	overline - linha em cima do texto, talvez para colocar assinatura 
+
+text-transform pode ter 3 tipos:
+	uppercase - Deixa todas as palavras maiusculas
+	lowercase - Deixa todas as palavras minusculas
+	capitalize - Esse fara com que todas as palavras do seletor selecionado fiquem com a primeira letra em maiusculo
+
+text-align tem basicamente 4 principais:
+	left - deixa tudo alinhado pra esquerda
+	right - deixa alinhado pra direita
+	center - deixa alinhado ao centro
+	justify - faz com que todo o texto tenha a mesma espessura, dessa forma faz o texto esticar por igual as palavras e ficar mais alinhado
+
+		Font Manipulation
+Com  manipulacao de fonte eh possivel ajustar o tamanho da fonte, negrito, italico, cor entre outros.
+Para ajuste de tamanho foi recomendado o em pois dessa forma vc aumenta o tamnho proporcional e nao um valor fixo como o px
+
+font-size ajusta o tamnho da letra, pode ser em px, em, % como quiser.
+
+font-weight eh o nivel de negrito que vc vai querer na fonte, pode ir de 0 a 900 (pode ser maior dependendo da fonte, geralmente vai ate 800 ou 900) aumentar de 100 em 100 que eh o padrao, o padrao vem em 400 geralmente
+
+font-style eh o nivel de italico que vc vai querer, existem 3 tipos:
+	normal - que eh o padrao sem nada
+	italic - que eh o italico 
+	olique - que eh o italico um pouco mais forte (pequena diferenca, mas existe)
+
+font-family existem 3 familias de fonte principais, serife, sans serif, e mono space
+	Serif sao as letras que nas pontas tem umas linhas que continuam, nao eh essa que eh utilizada aqui, mais facil ver com a letra M pq nas extremidades do M tem linhas que continuam nessa fonte. ex. Times new roman
+	sans serife sao as letras tipo essa daqui, nao tem essas linhas extras nas extremidades das letras. ex. arial, calibry
+	mono space basicamente as letras tem a mesma especurra, quase como um justify de fabrica. ex: cousine
+
+font-family: "Times New Roman", serif;
+O comando ficara da seguinte forma, caso va utilizar uma fonte especifica e ela tem espaco dentro do nome tipo Times new roman, entao ela deve estar dentro de aspas.O serif depois da fonte serve para 
+caso a fonte especificada nao esteja disponivel utilizar a familia definida, no caso a serif.
+
+		Utilizando fontes externas
+
+Apos selecionar a font que desseja no site do google fonts copiar o endereco do html e colar EM CIMA NO LINK DO CSS, importante pois quando a pagina carregar a fonte ja tem q estar disponivel.
+Depois no css vc pode especificar a fonte-family que vc baixou junto com o(s) backup(s) como no exemplo de cima.
+
+
+		Border
+	border: size style color;
+
+Dentro de style temos 4 tipos principais:
+	solid - eh uma linha normal e constante
+	dotted - sao varias bolinhas/pontinhos 
+	dashed - sao varios tracos com pequenos espacos entre eles
+	doubled - sao 2 linhas solidas uma mais por fora e outra por dentro com uma pequena distancia entre elas, eh tipo uma borda dentro de uma borda
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
