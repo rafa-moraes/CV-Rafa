@@ -177,8 +177,10 @@ Dentro de style temos 4 tipos principais:
 	dashed - sao varios tracos com pequenos espacos entre eles
 	doubled - sao 2 linhas solidas uma mais por fora e outra por dentro com uma pequena distancia entre elas, eh tipo uma borda dentro de uma borda
 
+		Float and Dislpay
 
-
+	dislpay:none; ele some com o item da tela completamente como se ele nao existisse, eh utilizado junto com JS caso queira deixar algo oculto e mostrar soh dps, ou coisa assim. 
+	
 
 
 

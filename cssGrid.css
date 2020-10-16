@@ -106,52 +106,40 @@ body {
 #name {
     font-size: 30px;
     padding-left: 40px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Trade Winds", cursive;
     letter-spacing: 0.3em;
     color: #fff;
-    text-align: right;
+    float: right;
 }
         /* Navigation bar  */
 
 .navigation {
-    position: relative;
-    top: 1000px;
-    z-index: 999;
-    background: linear-gradient(to right, rgb(138, 133, 133),rgba(138, 133, 133,0.9));
-    
-}
-.navigation {
     position: sticky;
     top: 10px;
     z-index: 999;
-
-
-}
-
-.navbar {
-    list-style: none;
-    font-weight: 500;
     
-        
 }
+
 .navbar ul {
     position: absolute;
     height: 50px;
+    width: 97.9%;
+    margin-top: 0;
     
-    background: #28363d;
+    background: rgba(47, 87, 93, 0.5);
 
 }
 
 .navbar li {
     position: sticky;
     display: inline;
-    padding-right: 5px;
+    padding-right: 0px;
     top: 0px;
     
 }
 .navbar a{
-    padding: 10px;
-    padding-left: 10px;
+    padding: 0px 10px 10px 10px;
+    margin-top: 10px;
     text-decoration: none;
     list-style: none;
     color: rgb(12, 9, 9);
@@ -161,8 +149,7 @@ body {
 .navbar a:hover {
     
     background: rgba(100, 57, 0, 0.534);
-    padding: 10px;
-    padding-left: 10px;
+    padding: 0px 10px 10px 10px;
     color: #fff;
     margin: 0;
     
@@ -179,12 +166,8 @@ body {
     /*background-image: url(Images/graduation-day.jpg);*/
     /* background-repeat: no-repeat;
     background-size: cover; */
-    
-              
+                  
 }
-
-
-
 
 .imgRafa {
     
