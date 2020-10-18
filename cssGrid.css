@@ -4,69 +4,103 @@ body {
     box-sizing: border-box;
     background: rgba(255, 255, 255, 0.959);
     position: static;
+    font-family: sans-serif;
     
 }
+
+#my-name{
+    text-align: center;
+    width: 500px;
+    font-size: 40px;
+    font-weight: 660;
+    font-family:  'Cutive Mono', monospace;
+    color: #dee1dd;
+    border-bottom: 2px solid  #dee1dd;
+    margin-bottom: 0;
+}
+#subtitle {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Cutive Mono',monospace;
+    width: 500px;
+    /* padding-bottom: 7px; */
+    /* border-bottom: 2px solid #dee1dd; */
+    color: #dee1dd;
+    
+}
+
+
         /* Parte de midias sociais */
 .social_media {
-    position: fixed;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
     
+}
+.social_media img {
+    padding-left: 110px;
 }
 .social_media ul{
+    position: absolute;
     list-style: none;
-    padding: 5px;
-    margin: 0px;
-    z-index: 9999;
+    left: 50%;
+    transform: translateX(-60%);
+    
     
 }
-.social_media li>a {
+.social_media a {
     text-decoration: none;
+    color: #dee1dd;
+    
 }
-.social_media ul li {
+.social_media ul a {
+    display: inline-block;
     font-size: 30px;
-    margin-bottom: 10px;
-    overflow: hidden;
-    width: 30px;
+    /* margin-bottom: 10px; */
+    padding-right:5px;
+    padding-left: 5px;
+    margin-left: 15px;
+    margin-right: 15px;
+    /* overflow: hidden; */
     transition: 0.3s;
-    text-align: center;
-    border-radius: 5px;
-       
+    
+           
 }
             /* LinkedIn icon*/
-.social_media li:nth-child(1) {
-    background-color: #007bb5;
+.social_media a:nth-child(1) {
+    
         
 }
-.social_media li:nth-child(1):hover {
-    background-color:#fff;
-    
+.social_media a:nth-child(1):hover {
+    background: rgb(0, 119, 181);
+    border-radius:5px;
+        
+}
+.fa:hover {
+    color: #fff;
 }
             /* Facebook icon*/
-.social_media li:nth-child(2){
-    background-color: #3b5998;
+.social_media a:nth-child(2){
     
-    
+        
 }
 
-.social_media li:nth-child(2):hover {
-    background-color: #fff;
-    
+.social_media a:nth-child(2):hover {
+    background: rgb(24, 119, 242);
+    border-radius:5px;
+
 }
             /* GitHub icon*/
-.social_media li:nth-child(3){
-    background-color: black;
+.social_media a:nth-child(3){
+    
     
 }
-.social_media li:nth-child(3):hover {
-    background-color: #fff;
+.social_media a:nth-child(3):hover {
+    background-color: rgb(179, 0, 179);
+    border-radius:5px;
 }
-
-
-
-
-
 
 
 
@@ -292,7 +326,7 @@ body {
                         
 .rodape {
     /* background: linear-gradient(to bottom, rgba(219, 124, 14, 0.1), rgba(219, 124, 14, 0.0)); */
-    background: rgba(47, 87, 93,1);
+    background: #2f575d;
     grid-area: rodape;
     color: black;
     position: static;

@@ -1,1 +1,6 @@
 [1015/191133.621:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1018/222036.386:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1019/001125.234:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\rafae\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\46a3891b-f684-4ea5-a41c-291a5800fd09: The system cannot find the path specified. (0x3)
+[1019/001239.472:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\rafae\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\b482efb1-1c4f-41b4-877b-cf27783e1848: The system cannot find the path specified. (0x3)
+[1019/001245.351:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\rafae\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\87435ec9-2b2a-4103-9099-c05b033242e1: The system cannot find the path specified. (0x3)
+[1019/001247.402:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\rafae\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\7a5dd027-ff1d-4cbc-91a9-5a65ef39b6f5: The system cannot find the path specified. (0x3)
