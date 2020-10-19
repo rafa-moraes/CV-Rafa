@@ -149,7 +149,7 @@ body {
 
 .navigation {
     position: sticky;
-    top: 10px;
+    top: 0px;
     z-index: 999;
     
 }
@@ -161,7 +161,8 @@ body {
     margin-top: 0;
     
     background: rgba(236, 238, 238, 1);
-
+    display: flex;
+    place-items: center;
 }
 
 .navbar li {
@@ -171,7 +172,7 @@ body {
     top: 0px;
     
 }
-.navbar a{
+.navbar a {
     padding: 0px 10px 10px 10px;
     margin-top: 10px;
     text-decoration: none;
