@@ -182,15 +182,30 @@ Dentro de style temos 4 tipos principais:
 	dislpay:none; ele some com o item da tela completamente como se ele nao existisse, eh utilizado junto com JS caso queira deixar algo oculto e mostrar soh dps, ou coisa assim. 
 	
 
+		FLEXBOX
+Para acionar o flexbox utilizar o comando:
+	dislplay:flex;
+O comando para definir se seus child containers vai ficar em linha ou em coluna eh o:
+	flex-direction: row ou column; padrao ele vir como row
+O comando para fazer com que ao encurtar a pagina o item va para proxima linha eh o:
+	flex-wrap: nowrap ou wrap; de padrao ele ja vem como nowrap
+Para alinhar os child containers utilizar o comando:
+	justify-content: ele ira alinhar os itens horizontalmente
+		flex-start - ele faz com que todos os child containers comecem da esquerda para direira dentro do container parent
+		flex-end - ele faz com que todos os child containers comecem da direita para esquerda dentro do container parent, mas sem alterar a ordem que foram criados (A, B, C, D, etc...)
+		center - ele faz com que todos os child containers fiquem centralizados dentro do container parent
+		space-between - ele distribui os child containers para que fiquem com a mesma distancia entre eles e ocupem o totalmente o container, mas o primeiro e o ultimo encostam na borda do container
+		space-around - ele vai criar um espaco em volta de todos os child containers para que fiquem igualmente distribuidos entre o container, entao o primeiro e ultimo tb tem espaco em relacao a borda do container
+	align-items: ele ira alinhas os items verticalmente
+		center - ele ira centralizar verticalmente os child containers em relacao ao topo e baixo do container parent (ele pode reajustar o tamanho do child container tb)
+		flex-start - ele vai fazer com que o child comece no topo do container 
+		flex-end - ele vai fazer com que o child comece no rodape do container
+		baseline - ele vai fazer com que independente do tamanho diferente dos child containers, ele faz com que eles fiquem sempre alinhados (pelo menos com o texo interno)
+		stretch - ele vai esticar os child containers para preencher de cima a baixo do container
 
 
 
-
-
-
-
-
-
+	video em 3:45
 
 
 
