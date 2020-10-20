@@ -160,7 +160,7 @@ body {
     width: 97.9%;
     margin-top: 0;
     
-    background: rgba(236, 238, 238, 1);
+    background: rgba(51, 54, 54, 0.87);
     display: flex;
     place-items: center;
 }
@@ -177,16 +177,14 @@ body {
     margin-top: 10px;
     text-decoration: none;
     list-style: none;
-    color: rgb(12, 9, 9);
+    color: #fff;
     font-weight: 800;
 }
 
 .navbar a:hover {
     
-    background: rgba(100, 57, 0, 0.534);
-    padding: 0px 10px 10px 10px;
-    color: #fff;
-    margin: 0;
+    color:rgb(53, 185, 206);
+  
     
 }
 
@@ -332,56 +330,61 @@ body {
     color: black;
     position: static;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 }
 
-.rodape #phone {
-    
-    width: 100%;
-    
+            /*  Parte de contatos telefone e email */
+#contact {
+    font-size: 10px;
 }
-
-#phone>h2{
+#contact h2 {
+    font-size: 25px;
     text-align: center;
-    position:relative;
-    top: 130px;
-
-}
-
-.rodape #email {
-       
-    width: 100%;
-
-}
-
-#email>h1 {
-    text-align: center;
-    position: relative;
     
 }
-
-#email>p {
-    text-align: center;
-    position: relative;
-    font: bold 18px normal;
-    
+#contact h3{
+    font-size: 25px;
+    margin-left: 20px;
 }
 
-#email>h2 {
+            /* Parte de formulario de email */
+
+
+#form {
+    font: 20px rgb(223, 15, 15) normal;
+    display: grid;
+}
+#form h2 {
     text-align: center;
-    position: relative;
-    top: 80px;
+    font-size: 25px;
 }
 
-.rodape #webpage {
-    
-    width: 100%;
+label {
+    color: #fff;
 }
 
-#webpage>h2 {
-    text-align: center;
-    position:relative;
-    top: 130px;
+#input-name {
+    height: 20px;
+    width: 300px;
+    margin-bottom: 10px;
+        
+}
+
+#input-email {
+    height: 20px;
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+#input-message{
+    height: 100px;
+    width: 400px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+#submit-btt {
+    width: 100px;
+    font-weight: 600;
 }
 
                     /* Seta para voltar ao topo*/
