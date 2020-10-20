@@ -120,6 +120,7 @@ vw - view width eh relacionado a um percentual do campo de visao que vc tem da t
 
 
 		Text Manipulation
+
 A manipulacao de texto eh independente da fonte, ou seja, se a fonte for arial, times new roman ou estiver em negrito, vc pode alinhar, colocar linhas, deixar em caixa alta com a manipulacao de texto, 
 mas vc nao consegue fazer esses tipos de coisa na manipulacao de fonte.
 
@@ -141,6 +142,7 @@ text-align tem basicamente 4 principais:
 	justify - faz com que todo o texto tenha a mesma espessura, dessa forma faz o texto esticar por igual as palavras e ficar mais alinhado
 
 		Font Manipulation
+
 Com  manipulacao de fonte eh possivel ajustar o tamanho da fonte, negrito, italico, cor entre outros.
 Para ajuste de tamanho foi recomendado o em pois dessa forma vc aumenta o tamnho proporcional e nao um valor fixo como o px
 
@@ -187,8 +189,10 @@ Para acionar o flexbox utilizar o comando:
 	dislplay:flex;
 O comando para definir se seus child containers vai ficar em linha ou em coluna eh o:
 	flex-direction: row ou column; padrao ele vir como row
+
 O comando para fazer com que ao encurtar a pagina o item va para proxima linha eh o:
 	flex-wrap: nowrap ou wrap; de padrao ele ja vem como nowrap
+
 Para alinhar os child containers utilizar o comando:
 	justify-content: ele ira alinhar os itens horizontalmente
 		flex-start - ele faz com que todos os child containers comecem da esquerda para direira dentro do container parent
@@ -196,6 +200,7 @@ Para alinhar os child containers utilizar o comando:
 		center - ele faz com que todos os child containers fiquem centralizados dentro do container parent
 		space-between - ele distribui os child containers para que fiquem com a mesma distancia entre eles e ocupem o totalmente o container, mas o primeiro e o ultimo encostam na borda do container
 		space-around - ele vai criar um espaco em volta de todos os child containers para que fiquem igualmente distribuidos entre o container, entao o primeiro e ultimo tb tem espaco em relacao a borda do container
+		space-evenly - ele ira fazer com que todos os espacos em volta dos child containers fiquem exatamente iguais, pq no space around no primeiro child na esquerda e no ultimo child na direita eles ficam com 1 espaco, enquanto entre os outros childs ele fica dobrado pq soma o espaco de um com o espaco de outro.
 	align-items: ele ira alinhas os items verticalmente
 		center - ele ira centralizar verticalmente os child containers em relacao ao topo e baixo do container parent (ele pode reajustar o tamanho do child container tb)
 		flex-start - ele vai fazer com que o child comece no topo do container 
@@ -203,15 +208,35 @@ Para alinhar os child containers utilizar o comando:
 		baseline - ele vai fazer com que independente do tamanho diferente dos child containers, ele faz com que eles fiquem sempre alinhados (pelo menos com o texo interno)
 		stretch - ele vai esticar os child containers para preencher de cima a baixo do container
 
+		Item Order
+Eh possivel utilizar o comando order para caso vc tenha varios containers vc pode coloca-los numa ordem diferente da que foram criados [pode ser utilizado para que a ordem seja alterada caso o usuario faca alguma acao atraves de JS, acho]	
+	order: o padrao eh 0, mas pra vc classificar a ordem vai de 1 ate o numero que vc quiser/tiver
+		
+		Grow, Shrink & Basis
+	flex-basis: Aqui vc pode definir um valor em px,% ou outros pra definir o tamanho minimo que seus containers terao
+	flex-grow: o padrao eh 0, ao definir um valor no grow vc estara preenchendo o espaco em branco do container principal fazendo com que os childs aumentem horizontalmente.Se um child tiver com valor maior que os demais este tera mais espaco que os outros.
+	flex-shrink: o padrao do shrink eh 1, se vc definir como 0 significa que vc nao quer que aquele container encolha nada, ao definir todos os child container com o mesmo numero todos vao encolher de forma proporcional, ao definir algum container com um valor maior vc esta dizendo para ele encolher mais rapido que os demais. Esse comando basicamente define se todos vao encolher ou nao, e qual a proporcao entre eles. (horizontalmente tb)
+
+Para fazer os comandos acima de forma resumida utilizar o comando flex
+	flex: grow shrink basis
+	flex: 0 1 100px
+		
+		Item Alignment
+O comando de baseline e stretch nao funcionam nesse comando.
+	align-self: vc pode usar o flex-start/flex-end ou center para fazer com que o child container se alinhe no topo, meio ou baixo do container parent, esse comando vai fazer soh o proprio child se mover e nao todos como no align items visto acima.
 
 
-	video em 3:45
+
+		GRID
+
+Para ativar o grid utilizar:
+	display: grid;
+
+Apos isso vc deve especificar a quantidade de linhas e/ou colunas que vc vai querer no seu grid utilizado:
+	grid-template-rows - para definir linhas ( um valor bom eh 1fr que significa 1 fracao, ou entao auto) auto auto auto (significa que teremos 3 linhas de tamanhos iguais), ou como as linhas nao vao variar muito de aparelho pra aparelho vc pode definir numeros absolutos tb, como pixels
+	grid-template-columns: para definir colunas igual ao de cima soh que sera para colunas, podemos utilizar as mesmas unidades de medida tb.
 
 
-
-
-
-
-
+video 4:21
 
 
