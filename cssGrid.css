@@ -102,8 +102,6 @@ body {
     border-radius:5px;
 }
 
-
-
 .container{
     display: grid;
     grid-template-columns: 1fr;
@@ -123,28 +121,7 @@ body {
     grid-area: cabecalho;
         
 }
-#bttnEnter {
-    height: 30px;
-    width: 80px;
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    border-radius: 10%;
-    background-color: transparent;
-    color: #fff;
-    
-}
 
-
-        /* My name */
-#name {
-    font-size: 30px;
-    padding-left: 40px;
-    font-family: "Trade Winds", cursive;
-    letter-spacing: 0.3em;
-    color: #fff;
-    float: right;
-}
         /* Navigation bar  */
 
 .navigation {
@@ -157,9 +134,9 @@ body {
 .navbar ul {
     position: absolute;
     height: 50px;
-    width: 97.9%;
+    width: 100%;
     margin-top: 0;
-    
+    padding-inline-start: 0;
     background: rgba(51, 54, 54, 0.87);
     display: flex;
     place-items: center;
@@ -186,6 +163,22 @@ body {
     color:rgb(53, 185, 206);
   
     
+}
+
+.hamburger {
+    display: none;
+    padding-left: 10px;
+    
+}
+
+.burger {
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0;
+    display: flex;
+    flex-direction: column;
+
 }
 
                         /* Parte de graduacao e foto*/
@@ -384,7 +377,11 @@ label {
 }
 #submit-btt {
     width: 100px;
+    /* border:none; */
+    color: #fff;
+    /* text-decoration: none; */
     font-weight: 600;
+    background: rgb(89,150,255);
 }
 
                     /* Seta para voltar ao topo*/
@@ -392,5 +389,22 @@ label {
     position: sticky;
     padding-top: 10px;
     padding-right: 10px;
+    
 }
 
+@media (max-width: 500px) {
+    
+    .navbar ul li{
+        display:none;
+        flex-direction: column;
+        
+
+    
+    }
+    .hamburger {
+        display: initial;
+        cursor: pointer;
+    }
+
+
+}

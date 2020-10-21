@@ -236,7 +236,143 @@ Apos isso vc deve especificar a quantidade de linhas e/ou colunas que vc vai que
 	grid-template-rows - para definir linhas ( um valor bom eh 1fr que significa 1 fracao, ou entao auto) auto auto auto (significa que teremos 3 linhas de tamanhos iguais), ou como as linhas nao vao variar muito de aparelho pra aparelho vc pode definir numeros absolutos tb, como pixels
 	grid-template-columns: para definir colunas igual ao de cima soh que sera para colunas, podemos utilizar as mesmas unidades de medida tb.
 
+Caso queira fazer 4 colunas com espaco de 1fr podemos utilizar o codigo repeat (4, 1fr) no comando de template columns, ou se quiser no de rows tb funciona
 
-video 4:21
+		Justify & Align 
+O justify ele ira alinhar os container horizontalmente assim como no flexbox
+	justify-content:
+			center; ira alinhar os itens ao centro do container parent
+			start; ira alinhar os itens a esquerda do container parent
+			end; ira alinhas os itens a direita do container parent
+			space-evenly; ira alinhar para que todos os child containers tenham o mesmo espacamento entre eles horizontalmente
+			space-around; ira alinhas para que todos os child containers tenham um espaco definido entre eles, a diferenca pro de cima eh que no primero e ultimo ao lado dele q nao tiver outro child container esse espaco sera menor do que entre os child containers
+
+O align	alinha os containers de forma vertical assim como no flexbox
+	align-content:		      		      
+			center;
+			start;
+			end;
+			space-around;
+			space-evenly;
+			space-between; ele ira dar um espaco entre os child container verticalmente mas no top e bottom nao
+			
+		Column & row gaps
+O gap ira criar um espaco entre os child containers que vc ira definir
+	grid-column-gap: valor que deseja de gap entre as colunas
+	grid-row-gap: valor que deseja de gap entre as linhas
+O atalho para nao precisar escrever os 2 comandos acima eh o:
+	grid-gap: row_gap column_gap
+ex:	grid-gap: 100px 50px;
+	
+		Grid Area
+Vc pode definir nomes em cada um dos child containers atraves do comando:
+	grid-area: 
+									e depois no container parent vc ira utilizar o comando
+	grid-template-areas:
+																aonde vc definira atraves dos nomes do child containers aonde ele ira comececar e onde terminar, assim vc define o tamanho do seu child container
+
+	ex: no parent grid-template-areas: "header"
+					   "information"
+					   "data" ;
+	    no child 1 grid-area: header;
+	    no child 2 grid-area: information;
+	    no child 3 grid-area: data;
+
+obs: caso queira utilizar um comando para falar que a coluna e/ou linha mova x espacos utilizar spanx(onde x eh o numero de espacos que quer mover) eh mais utilizado quando nao utilizamos o modo com nome acima mencionado
+ex grid-area: 2/ 1 / span 2 / span 3
+   grid-area: row / column/ row to / column to 	
+
+		Transition property - Utilizar retro-compatibilidade com outros browsers com webkit, etc...
+
+A propriedade transition tem dentro dela 4 caracteristicas que vc pode especificar:
+	transition: background 0.5s ease-in-out 2s;
+	o primeiro definido como background eh o que vc vai querer que transicione, vc pode selecionar all se quiser, mas as vezes eh melhor especificar o que vc quer pra nao mudar tudo ao mesmo tempo e estragar
+	o segundo que esta em 0.5s eh a velocidade de transicao
+	o terceiro que esta ease-in-out eh o tipo de transicao, existem varios tipos, alguns comungos sao ease,ease-in-out, linear, entre outros
+			ease - specifies a transition effect with a slow start, then fast, then end slowly (this is default)
+			linear - specifies a transition effect with the same speed from start to end
+			ease-in - specifies a transition effect with a slow start
+			ease-out - specifies a transition effect with a slow end
+			ease-in-out - specifies a transition effect with a slow start and end
+			cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier function
+	o ultimo eh o delay para comecar a transicao, eu acho que prefiro sempre 0, mas eh importante avaliar caso a caso.
+
+Como em versoes anteriores de browser algumas funcoes como o transition nao funcionam, podemos especificar para que caso essa funcao nao funcione para que ela nao execute.
+Para fazer isso antes da funcao colocamos o seguinte:
+	-webkit-funcao: o webkit serve nos seguintes browsers Dolphin Browser, Firefox for iOS, Maxthon, Konqueror, Microsoft Edge for iOS, Midori, GNOME Web, Safari.
+	-moz-funcao: para o mozila
+	-o-funcao: para o opera
+
+		Transformation functions - Utilizar retro-compatibilidade com outros browsers com webkit, etc...
+
+O transform serve para fazer o item se mover, rotacionar ou alterar o tamanho de algo
+
+O translate serve para mover algo nos eixos X (horizontal) e Y (vertical), dessa forma vc pode ajustar coisas sem utilizar margin, padding e outros.
+	transform:translate(X , Y)
+
+O scale serve parecido como um padding, mas ele ira aumentar o tamanho do item e x vezes
+	transform:scale(2.5) nesse caso o item criado ira aumentar 2.5x o seu tamanho original.
+
+O rotate serve para rotacionar o item utilizando as mesmas escalas em graus utilizadas no linear gradient
+	transform: rotate(-90deg) ele ira rodar para a esquerda 90 graus, se fosse positivo ele rodaria para direita 90 graus, e assim vc define quantos graus vc quer
+
+O skew eh quase como se ele tb ira usar medidadas em graus e serve para rotacionar o item mas de uma forma que eh como se ele puxasse somente 2 pontas na horizontal e/ou vertical, nao eh muito utilizado e fica bem feio
+	transform: skewX(45deg) ou skewY(45deg) ou o atalho para os 2 skew(-45deg, 45deg)
+
+		Animations
+Para definir um padrao que pode ser utilizado em varias situacoes que terao animacoes utilizamos keyframes da seguinte forma como se fosse uma variavel:
+	@keyframes nome que vc quiser { }
+					dentro das curly braces podemos especificar de 2 maneiras como queremos a animacao com from to ou com percentual:
+
+	@keyframes red-to-blue { from {background:red} to {background:blue} ou
+	@keyframes red-to-blue { 0% {background:red} 100% {background:blue}
+
+No percentual podemos adicionar varios percentuais e varias mudancao que podem acontecer no meio do caminho. A convencao diz que nesse caso facamos tudo em uma linha, mas caso fique muito grande pode dividir em varias linhas para facilitar a leitura
+
+Apos criar o seu keyframe para adiciona-lo em qualquer parte da pagina vc ira selecionar o elemento que quiser e usar os comandos:
+*	animation-name: red-to-blue; que eh o nome que vc criou 
+*	animation-duration: 4s; com essa propriedade a animacao ira executar e ao terminar ira voltar ao estado original
+Os 2 acima sao obrigatorios para a animacao funcionar
+	animation-timing-function: linear, ease, ease-in, etc ; igual ao do transition
+	animation-delay: 2s; ira funcionar como delay normal, mas se vc colocar -2s ao carregar a pagina ele vai entender como se vc estivesse ja 2 segundos a frente e vai cortar parte da animacao.
+	animation-iteration-count: 2; isso define a quantidade de vezes q a animacao ira executar, podemos utilizar o infinite para ficar pra sempre
+	animation-direction:
+			    normal - ira executar normalmente de 0% a 100%, e eh o valor padrao
+			    reverse - ira comecar do 100% e vai ate o 0%
+			    alternate - ira de 0% a 100% e depois de 100% a 0% (esse pode ser influenciado pela quantidade de vezes q a animacao ira se repetir, se for 1 vez soh ele nao ira voltar)
+			    alternate-reverse - faz o mesmo de cima mas o contrario
+
+O atalho para utilizar todas as animacoes acima mencionadas em uma eh:
+	animation: name duration timing-function delay iteration-count direction;
+ex:	animation: red-to-blue 4s linear 0s 2 alternate;
+
+		Media query
+Media query sao basicamente funcoes mas dentro do css, nele vc pode definir se vc quer q alguma funcao aconteca quando o dispositivo for:
+
+	screen - ou seja, qualquer tela, de celular, monitor, tablet
+	print - na tela de impressao do arquivo
+	speech - quando for para leitura da tela
+	all - todos os acima
+
+Geralmente eh utilizada a funcao all, ou caso nao seja colocado nada ele ira utilizar de padrao o all.
+Apos isso devemos definir o criterio que queremos, como largura maxima da tela, ou orientacao da tela, mais de um criterio ao mesmo tempo, ou ate um ou outro criterio como abaixo:
+	@media (max-width:500px) { } - um unico criterio
+	@media (orientation:landscape) and (min-width: 200px) { } - 2 criterios obrigatorios
+	@media (orientation:portrait), (max-width:500px) { } - ou um ou outro criterio
+
+video em 5:35
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+		      
