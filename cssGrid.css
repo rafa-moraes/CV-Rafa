@@ -392,19 +392,40 @@ label {
     
 }
 
-@media (max-width: 500px) {
+
+@media (max-width:600px) {
     
+    .navbar ul{
+        display:flex;
+        flex-direction: column;
+        place-items: start;
+    }
     .navbar ul li{
         display:none;
-        flex-direction: column;
-        
+   
+    }
 
-    
-    }
     .hamburger {
-        display: initial;
+        display: block;
         cursor: pointer;
+        
     }
+
+
+}
+@media (max-width:600px) {
+
+    .navbar.responsive ul{
+        display:flex;
+        flex-direction: column;
+        place-items: start;
+        
+    }
+    .navbar.responsive ul li{
+        display:block;
+   
+    }
+
 
 
 }

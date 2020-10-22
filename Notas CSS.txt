@@ -4,9 +4,10 @@ Comentario eh /* comentario */
 
 Selectors sao o que vao mirar os elementos que sao o h1 , h2 etc, os seletores sao no css quando vc poe h1 {} e o que vai dentro das curly braces sao as propriedades
 
-Seletor:
-h1 (elemento) {
-color (propriedade): blue (valor);
+		Seletor:
+			h1 (elemento) {
+			color (propriedade): blue (valor);
+			}
 
 Para criar um arquivo externo de css eh soh criar um arquivo com a extensao .css
 Ao usar o comando link:css ele ja ira criar um codigo e na parte de href se vc segurar o ctrl e clicar e vc nao tiver 
@@ -78,13 +79,17 @@ Caso vc tenha uma class que tenha assim por exemplo casa-cachorro e vc queira se
 	h2[class|=casa-cahorro]{}
 
 
-		Background:
+		Background images
+
 Podemos utilizar o comando background no css para colocar uma cor ou imagem no fundo da pagina
 para colocar uma imagem utilizar:
+
 	background: url("endereco online ou da sua pasta");
+
 Para fazer com que a imagem nao se repita utilizar o comando:
 background-repeat: no-repeat;
 Para ajustar o tamanho da imagem de fundo:
+
 	background-size: 50px (height) 100px (width);
 	background-size: cover; Ira preencher o espaco inteiro, talvez possa comprometer a qualidade da imagem
 	background-size: contain; Ele ira preencher o maximo que ter sem prejudicar as proporcoes, mas isso pode fazer com que a imagem nao pegue todo o espaco do container
@@ -177,7 +182,7 @@ Dentro de style temos 4 tipos principais:
 	solid - eh uma linha normal e constante
 	dotted - sao varias bolinhas/pontinhos 
 	dashed - sao varios tracos com pequenos espacos entre eles
-	doubled - sao 2 linhas solidas uma mais por fora e outra por dentro com uma pequena distancia entre elas, eh tipo uma borda dentro de uma borda
+	double - sao 2 linhas solidas uma mais por fora e outra por dentro com uma pequena distancia entre elas, eh tipo uma borda dentro de uma borda
 
 		Float and Dislpay
 
@@ -201,6 +206,7 @@ Para alinhar os child containers utilizar o comando:
 		space-between - ele distribui os child containers para que fiquem com a mesma distancia entre eles e ocupem o totalmente o container, mas o primeiro e o ultimo encostam na borda do container
 		space-around - ele vai criar um espaco em volta de todos os child containers para que fiquem igualmente distribuidos entre o container, entao o primeiro e ultimo tb tem espaco em relacao a borda do container
 		space-evenly - ele ira fazer com que todos os espacos em volta dos child containers fiquem exatamente iguais, pq no space around no primeiro child na esquerda e no ultimo child na direita eles ficam com 1 espaco, enquanto entre os outros childs ele fica dobrado pq soma o espaco de um com o espaco de outro.
+	
 	align-items: ele ira alinhas os items verticalmente
 		center - ele ira centralizar verticalmente os child containers em relacao ao topo e baixo do container parent (ele pode reajustar o tamanho do child container tb)
 		flex-start - ele vai fazer com que o child comece no topo do container 
@@ -303,6 +309,7 @@ Para fazer isso antes da funcao colocamos o seguinte:
 	-moz-funcao: para o mozila
 	-o-funcao: para o opera
 
+
 		Transformation functions - Utilizar retro-compatibilidade com outros browsers com webkit, etc...
 
 O transform serve para fazer o item se mover, rotacionar ou alterar o tamanho de algo
@@ -319,6 +326,7 @@ O rotate serve para rotacionar o item utilizando as mesmas escalas em graus util
 O skew eh quase como se ele tb ira usar medidadas em graus e serve para rotacionar o item mas de uma forma que eh como se ele puxasse somente 2 pontas na horizontal e/ou vertical, nao eh muito utilizado e fica bem feio
 	transform: skewX(45deg) ou skewY(45deg) ou o atalho para os 2 skew(-45deg, 45deg)
 
+		
 		Animations
 Para definir um padrao que pode ser utilizado em varias situacoes que terao animacoes utilizamos keyframes da seguinte forma como se fosse uma variavel:
 	@keyframes nome que vc quiser { }
