@@ -21,19 +21,20 @@
         </ul>
     </div>
     <div class="navigation">
-        <nav class="navbar">
+        <nav class="navbar"id="my-navbar">
             <ul class="navbar-ul">
-                <div class="hamburger" onclick="responsive()">
+                <i class="fa fa-bars" onclick="responsive()" ></i>
+                <!-- <div class="hamburger" onclick="responsive()">
                     <div class="burger"></div>
                     <div class="burger"></div>
                     <div class="burger"></div>
                     
-                </div>                
+                </div>                 -->
                 <li><a href="#">HOME</a></li>
-                <li><a href="#gradPage">GRADUATION</a></li>
-                <li><a href="#expPage">EXPERIENCE</a></li>
-                <li><a href="#sskPage">SKILLS </a></li>
-                <li><a href="#contactPage">CONTACT </a></li>
+                <li><a href="#gradPage" onclick="close()">GRADUATION</a></li>
+                <li><a href="#expPage" onclick="close()">EXPERIENCE</a></li>
+                <li><a href="#sskPage" onclick="close()">SKILLS </a></li>
+                <li><a href="#contactPage" onclick="close()">CONTACT </a></li>
 
                 <!-- <li><span id="name">Rafael M.B.</span> </li> -->
             </ul>   
@@ -193,11 +194,12 @@
                 <h2>Contact Me</h2>
                 <h3 class="fa fa-whatsapp">&nbsp;+353 83 112 5484</h3></br>
                 <h3 class="fa fa-envelope">&nbsp;rafael_m_barros@hotmail.com</h3> </br>
-                <h3 class="fa fa-chrome">&nbsp;www.webpage.com.br</h3>                             
+                <h3 class="fa fa-chrome">&nbsp;www.webpage.com.br</h3>
+                <a id="contactPage"></a>                             
             </div>    
 
             <div id="form">
-                <a id="contactPage"></a>
+                
                 <h2>Send me an e-mail</h2>
                 <form action="">
                     <label for="name">Name:</label>

@@ -17,6 +17,7 @@ body {
     color: #dee1dd;
     border-bottom: 2px solid  #dee1dd;
     margin-bottom: 0;
+    
 }
 #subtitle {
     margin-top: 10px;
@@ -41,6 +42,7 @@ body {
 }
 .social_media img {
     padding-left: 110px;
+    
 }
 .social_media ul{
     position: absolute;
@@ -131,6 +133,13 @@ body {
     
 }
 
+.navbar-ul i{
+    font-size: 30px;
+    margin-left: 10px;
+    display: none;
+    color: #fff;
+}
+
 .navbar ul {
     position: absolute;
     height: 50px;
@@ -198,7 +207,6 @@ body {
 .imgRafa {
     
     position: static;
-    
     margin-top: 50px;
     padding-left: 20%;
     padding-top: 85px;
@@ -393,39 +401,39 @@ label {
 }
 
 
+
 @media (max-width:600px) {
     
     .navbar ul{
         display:flex;
-        flex-direction: column;
-        place-items: start;
+        float:none;
     }
     .navbar ul li{
         display:none;
    
     }
 
-    .hamburger {
+    .navbar-ul i{
         display: block;
         cursor: pointer;
         
     }
-
+    
 
 }
 @media (max-width:600px) {
 
     .navbar.responsive ul{
-        display:flex;
-        flex-direction: column;
-        place-items: start;
-        
+        display:block;
+        float: left;
+        height: 280px;
+                
     }
     .navbar.responsive ul li{
         display:block;
+        margin-top: 20px;
    
     }
-
-
-
-}
+    .navbar.responsive i{
+        margin-top: 10px;
+    }
