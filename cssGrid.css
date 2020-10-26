@@ -106,8 +106,8 @@ body {
 
 .container{
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1000px 1000px 1000px 1000px 300px;
+    grid-template-columns: 100vw;
+    grid-template-rows: 1000px 1000px 1000px 1000px 800px;
     grid-template-areas: "cabecalho"
                          "graduation"
                          "experiencias"   
@@ -192,39 +192,48 @@ body {
 
                         /* Parte de graduacao e foto*/
 .graduation {
-    /* background:  linear-gradient(to bottom, rgba(219, 124, 14, 0.6), rgba(219, 124, 14, 0.4)); */
+
     background: linear-gradient(to bottom, rgb(153, 174, 173), #DEE1DD);
     grid-area: graduation;
-    display: grid;
-    grid-template-columns: 5fr 0.2fr 5fr;
-    position: static;
-    /*background-image: url(Images/graduation-day.jpg);*/
-    /* background-repeat: no-repeat;
-    background-size: cover; */
+    display: flex;
+
                   
 }
 
 .imgRafa {
     
-    position: static;
-    margin-top: 50px;
-    padding-left: 20%;
-    padding-top: 85px;
+    /* position: static; */
+    /* margin-top: 50px; */
+    /* padding-left: 20%;
+    padding-top: 85px; */
+    display: flex;
+    max-width: 40%;
+    place-items: flex-start center;   /* Caso precise ajustar a imagem ao centro trocar aqui*/
     
 }
 .imgRafa img{
-    position: relative;
+    /* position: relative; */
     height: auto;
-    max-width: 90%;
-        
+    max-width: 60%;
+    
+    margin-left: 50%;
+    transform: translateX(-50%);
+    min-width:320px;
+    
+            
 }
+
+
+
 
 .graduationTxt {
     color: rgb(15, 1, 1);
-    position: relative;
-    margin-top: 50px;
+    /* margin-top: 50px; */
+    display: flex;
     
-        
+    place-items: center;
+    flex-direction: column;
+    width: 50%;
 }
 
 .graduationTxt > h2 {
@@ -248,36 +257,35 @@ body {
     /* background: linear-gradient(to bottom, rgba(219, 124, 14, 0.4), rgba(219, 124, 14, 0.2)); */
     background: linear-gradient(to bottom, #DEE1DD,rgb(153, 174, 173)) ;
     grid-area: experiencias;
-    display: grid;
-    grid-template-columns: 5fr 0.2fr 5fr;
-    /*background-image: url(Images/experience_book.jpg);*/
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: static;
+    display: flex;
     
-    
+ 
 }
 .expIrl {
     color: rgb(0, 0, 0);
-    position: relative;
-    left: 30px;
+    margin-left: 5%; 
     margin-top: 100px;
+    width: 50%;
 }
 .expIrl>h2{
     position: relative;
     bottom: 50px;
+    text-align: center;
 
 }
-
 
 .expBrl {
     color: rgb(0, 0, 0);
     position: relative;
     margin-top: 100px;
+    margin-left: 5%; 
+    width: 50%;
 }
 .expBrl>h2{
     position: relative;
     bottom: 50px;
+    text-align: center;
+    
 }
 
 
@@ -288,17 +296,18 @@ body {
     /* background: linear-gradient(to bottom, rgba(219, 124, 14, 0.2), rgba(219, 124, 14, 0.1)); */
     background: linear-gradient(to bottom, rgb(153, 174, 173), rgb(47, 87, 93));
     grid-area: ssk;
-    display: grid;
+    display: flex;
     grid-template-columns: 5fr 0.2fr 5fr;
 }
 .knowledge {
     color: rgb(0, 0, 0);
     position: relative;
-    left: 30px;
     margin-top: 100px;
+    width: 50%;
 
 }
 .knowledge>h2 {
+    text-align: center;
     position: relative;
     bottom: 50px;
 
@@ -310,8 +319,10 @@ body {
     position: relative;
     left: 0px;
     margin-top: 100px;
+    width: 50%;
 }
 .skills>h2 {
+    text-align: center;
     position: relative;
     bottom: 50px;
 }
@@ -329,14 +340,16 @@ body {
     background: #2f575d;
     grid-area: rodape;
     color: black;
-    position: static;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    
+    
 }
 
             /*  Parte de contatos telefone e email */
 #contact {
     font-size: 10px;
+    width: 50%;
+    
 }
 #contact h2 {
     font-size: 25px;
@@ -353,7 +366,10 @@ body {
 
 #form {
     font: 20px rgb(223, 15, 15) normal;
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    
 }
 #form h2 {
     text-align: center;
@@ -407,16 +423,86 @@ label {
     .navbar ul{
         display:flex;
         float:none;
+        
+        
     }
     .navbar ul li{
         display:none;
-   
+           
     }
 
     .navbar-ul i{
         display: block;
         cursor: pointer;
         
+    }
+    .graduation {
+        flex-wrap: wrap;
+        place-items: flex-start center;
+    }
+    .graduationTxt{
+        width: 100%;
+        margin-left: 2%;
+    }
+    
+    .imgRafa img {
+        min-width: 150%;
+        width: 100%;
+        display: flex;
+        transform: translateX(0%);
+        
+    }
+    .experiencias {
+        flex-wrap: wrap;
+        place-items: flex-start center;
+        background: teal;
+        
+    }
+   
+    .expIrl {
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 2%;
+        
+    }
+    .expBrl {
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 2%;
+    }
+
+    .ssk{
+        flex-wrap: wrap;
+        place-items: flex-start center 
+
+    }
+    .skills {
+        width: 100%;
+        margin-left: 2%;
+
+    }
+    .knowledge{
+        width: 100%;
+        margin-left: 2%;
+
+    }
+
+    .rodape {
+        display:flex;
+        flex-wrap: wrap ;
+        place-items: flex-start center;
+        
+    }
+    #contact {
+        width: 100%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+
+    }
+    #form {
+        width: 100%;
+        margin-left: 10%;
     }
     
 
@@ -427,13 +513,15 @@ label {
         display:block;
         float: left;
         height: 280px;
+        transition: all 0.5s ease-out;
                 
     }
     .navbar.responsive ul li{
         display:block;
         margin-top: 20px;
-   
+    
     }
+
     .navbar.responsive i{
         margin-top: 10px;
     }

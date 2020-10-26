@@ -8,6 +8,7 @@ function responsive() {
     }
 }
 
+        // Nao esta funcionando
 function close() {
     let navbar = document.querySelector("#my-navbar");
     if (navbar.className === ".responsive"){
