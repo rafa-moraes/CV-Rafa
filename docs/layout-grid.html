@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste CSS Grid</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cssGrid.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <div class="social_media">
+        <img src="Images/logo-rafav2.png" alt="">
+        <h1 id="my-name">Rafael Moraes Barros</h1>
+        <p id="subtitle">Front-end developer apprentice</p>
+        <ul>
+            <a href="https://www.linkedin.com/in/rafael-moraes-barros-53760a53/" target="_blank" class="fa fa-linkedin"></a>
+            <a href="https://www.facebook.com/rafael.moraes.503/" target="_blank" class="fa fa-facebook"></a>
+            <a href="https://github.com/rafa-moraes" target="_blank" class="fa fa-github"></a>
+        </ul>
+    </div>
+    <div class="navigation">
+        <nav class="navbar"id="my-navbar">
+            <ul class="navbar-ul">
+                <i class="fa fa-bars" onclick="responsive()" ></i>
+                <!-- <div class="hamburger" onclick="responsive()">
+                    <div class="burger"></div>
+                    <div class="burger"></div>
+                    <div class="burger"></div>
+                    
+                </div>                 -->
+                <li><a href="#">HOME</a></li>
+                <li><a href="#gradPage" onclick="close()">GRADUATION</a></li>
+                <li><a href="#expPage" onclick="close()">EXPERIENCE</a></li>
+                <li><a href="#sskPage" onclick="close()">SKILLS </a></li>
+                <li><a href="#contactPage" onclick="close()">CONTACT </a></li>
+
+                <!-- <li><span id="name">Rafael M.B.</span> </li> -->
+            </ul>   
+        </nav>
+    </div>
+     <div class="container">
+        <header class = "cabecalho">
+            <div>
+                <a id="topPage"></a>
+            </div>
+            
+        </header>
+        
+        <!----------------------- Graduacao e foto de perfil------------------------------>
+        
+        <div class="graduation">
+            
+            <div class="imgRafa">
+                <img src="Images/fotoRafa515.jpg" alt="">
+            </div>
+            <a id="gradPage"></a>      
+            <div class="graduationTxt">
+                 
+                <h2> Who am I ?</h2>
+                <div>
+                    <p>I am a Braziliam man living in Ireland since 2018.</p>
+                    <ul>
+                        <li>FECAP (In the Top 20 best private universities for Business and Economy) - Bachelor's degree in Business Administration | Graduated – (Brazil/2008)</li>
+                        <li>•	ESPM (ranked #3 best university of the country for Marketing) MBA in Market management | Graduated – (Brazil/2014) </li>
+                        <li>•	University of La Verne (ranked #136 in National Universities) - Advanced Business Strategy Graduated – (USA/2015) </li>
+                        <li>•	BCN Languages – Spanish Course 6 months (Barcelona may/2018)</li>
+                        <li>•	Clarify S/A – Microsoft Excel (Advanced VBA) Graduated (Brazil/2016) </li>
+                        <li>Curso em Video - JavaScript</li>
+                        <li>Wesbos - JavaScript</li>
+                        <li>Curso em Video - </li>
+
+                    </ul>
+                </div>
+            </div>
+            
+            <!-----------------------Experiencia profissional ---------------------------->
+
+
+
+        </div>
+        <div class="experiencias"> 
+            <div class="expIrl">
+                
+                <h2>Experience in Ireland</h1>
+                    <ul>
+                        <li>
+                            <h2 class="subtitle">2020 - Security</h2>
+                            <p>Door Security in Pubs, stores, nightclubs and events. <br>
+                            <strong>Position:</strong> Door Security <br> 
+                            <strong>Company:</strong> C2 Security
+                            </p>
+                        </li>
+                        
+                        <li>    
+                            <h2 class="subtitle">2019 - Security</h2>
+                            <p>Door Security in Pubs, stores and casinos | VIP Security at Aviva Stadium <br>
+                            <strong>Position:</strong> Door Security <br> 
+                            <strong>Company:</strong> Pulse Security
+                        </li>  
+                        <li>  
+                            <h2 class="subtitle">2018 - Night Porter</h2>
+                            <p>Responsible for the cleaning of the entire Pub with 4 floors | Helped a few times as floor staff <br>   
+                            <strong>Position:</strong> Night Porter <br> 
+                            <strong>Company:</strong> The Auld Dubliner Pub
+                            </p>    
+
+                            
+                        </li>
+                    </ul>
+                    
+            </div>
+             <a id="expPage"></a>
+             
+
+            <div class="expBrl"> 
+                <h2>Experience in Brazil</h1>
+                    <ul>
+                        <li>
+                            <h2 class="subtitle">2020 - Security</h2>
+                            <p>Door Security in Pubs, stores, nightclubs and events. <br>
+                            <strong>Position:</strong> Door Security <br> 
+                            <strong>Company:</strong> C2 Security
+                            </p>
+                        </li>
+                        
+                        <li>    
+                            <h2 class="subtitle">2019 - Security</h2>
+                            <p>Door Security in Pubs, stores and casinos | VIP Security at Aviva Stadium <br>
+                            <strong>Position:</strong> Door Security <br> 
+                            <strong>Company:</strong> Pulse Security
+                        </li>  
+                        <li>  
+                            <h2 class="subtitle">2018 - Night Porter</h2>
+                            <p>Responsible for the cleaning of the entire Pub with 4 floors | Helped a few times as floor staff <br>   
+                            <strong>Position:</strong> Night Porter <br> 
+                            <strong>Company:</strong> The Auld Dubliner Pub
+                            </p>    
+
+                            
+                        </li>
+                    </ul>
+            </div>
+            
+        </div>
+        
+        <div class="ssk">
+            <div class="knowledge">
+                <h2 class="subtitle">Knowledge</h2>
+                <ul>
+                    <li>Academic
+                        <p>Business communication; Marketing Research; Marketing; Human resources on organizations; Strategic thinking, Business strategy, Consumer insights, Neuroscience </p>
+                    </li>
+                    <li>Computing
+                        <p>Complete package of MS Office Software specially MS Excel and Power Point (Macro and VBA included); Business Intelligence </p>
+                    </li>
+                    <li>Languages
+                        <p>Native Portuguese; Fluent English; Fluent Spanish</p>
+                    </li>
+                    <li>Presentation skills </li>
+                    
+                </ul>
+
+
+            </div>
+
+            
+                <a id="sskPage"></a>  
+            
+            
+            <div class="skills">
+                <h2 class="subtitle">Skills</h2>
+                <ul>
+                    <li>Good communicator and a very good with team work</li>
+                    <li>Ease to learn new things, dedicated and determinate with the company mission </li>
+                    <li>Always searching for continuous improvement</li>
+                    <li>Capable of taking high pressure decisions</li>
+                    <li>Seek for the best results for the company.</li>
+
+
+                </ul>
+
+
+
+
+            </div>
+
+        </div>
+        
+
+
+        <footer class ="rodape">
+            <div  id="contact">
+                <h2>Contact Me</h2>
+                <h3 class="fa fa-whatsapp">&nbsp;+353 83 112 5484</h3></br>
+                <h3 class="fa fa-envelope">&nbsp;rafael_m_barros@hotmail.com</h3> </br>
+                <h3 class="fa fa-chrome">&nbsp;www.webpage.com.br</h3>
+                <a id="contactPage"></a>                             
+            </div>    
+
+            <div id="form">
+                
+                <h2>Send me an e-mail</h2>
+                <form action="">
+                    <label for="name">Name:</label>
+                    <input type="text" placeholder="Name" name="Name" id="input-name"></br>
+                    <label for="email">E-mail:</label>
+                    <input type="email" placeholder="E-mail" name="E-mail" id="input-email"></br>
+                    <label for="msg">Message:</label></br>
+                    <!-- <textarea name="" id="" cols="30" rows="10"></textarea> -->
+                    <input type="text" name="Message" id="input-message"></br>
+                    <input type="submit" value="Submit" id="submit-btt">
+
+                </form>
+
+            </div>
+
+            
+            
+            
+             <!-- Fazer uma funcao para abrir uma caixa de formulario para enviar o email automatico-->
+            
+
+            
+            
+        </footer>
+    </div>
+
+    <script src="javaScript.js"></script>
+
+</body>
+</html>
