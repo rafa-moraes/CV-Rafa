@@ -90,7 +90,7 @@ Para fazer com que a imagem nao se repita utilizar o comando:
 background-repeat: no-repeat;
 Para ajustar o tamanho da imagem de fundo:
 
-	background-size: 50px (height) 100px (width);
+	background-size: 50px (width) 100px (height) ;
 	background-size: cover; Ira preencher o espaco inteiro, talvez possa comprometer a qualidade da imagem
 	background-size: contain; Ele ira preencher o maximo que ter sem prejudicar as proporcoes, mas isso pode fazer com que a imagem nao pegue todo o espaco do container
 
